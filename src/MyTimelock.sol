@@ -12,10 +12,7 @@ contract MyTimelock is TimelockController {
     /// @param proposers Addresses granted the proposer role.
     /// @param executors Addresses granted the executor role (address(0) means anyone).
     /// @param admin Address granted the default admin role (set to address(0) to renounce).
-    constructor(
-        uint256 minDelay,
-        address[] memory proposers,
-        address[] memory executors,
-        address admin
-    ) TimelockController(minDelay, proposers, executors, admin) {}
+    constructor(uint256 minDelay, address[] memory proposers, address[] memory executors, address admin)
+        TimelockController(minDelay, proposers, executors, admin)
+    {}
 }

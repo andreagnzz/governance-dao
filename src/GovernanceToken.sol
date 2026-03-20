@@ -12,10 +12,7 @@ import {Nonces} from "@openzeppelin/contracts/utils/Nonces.sol";
 contract GovernanceToken is ERC20, ERC20Permit, ERC20Votes {
     /// @notice Deploys the GovernanceToken and mints the initial supply to the owner.
     /// @param _initialOwner Address that receives the full initial supply of 1,000,000 tokens.
-    constructor(address _initialOwner)
-        ERC20("Governance Token", "GOV")
-        ERC20Permit("Governance Token")
-    {
+    constructor(address _initialOwner) ERC20("Governance Token", "GOV") ERC20Permit("Governance Token") {
         _mint(_initialOwner, 1_000_000 ether);
     }
 
